@@ -1,0 +1,11 @@
+.container {
+  padding-top: 00px;
+}
+td,
+th {
+  padding: 10px;
+  font-family: Montserrat;
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+}

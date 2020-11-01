@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4"></div>
+        <div class="col-lg-4 col-md-4">
+            <div class="card" style="width: 100%">
+                <div class="card-body">
+                    <h3 style="text-align: center;">Enter Vehicle Number</h3>
+                    <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <input type="email" name="vehcile_no" formControlName="vehcile_no" class="form-control" placeholder="Enter Vehicle Number">
+                        </div>
+                        <button class="btn btn-primary" type="submit" style="margin-left: 33%; width: 33%;" *ngIf="!isLoading">Search</button>
+                        <button class="btn btn-primary" type="button" disabled *ngIf="isLoading" style="margin-left: 33%; width: 33%;">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" ></span>
+                            Loading...
+                          </button>
+                    </form>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4 col-md-4"></div>
+    </div>
+    <div *ngIf="isdetails">
+        <h3 style="text-align: center;" *ngIf="noData">No Data Available!</h3>
+        <table *ngIf="!noData">
+            <!-- <tr>
+                <th style="font-weight: bold;">Chassis Number:</th><td>{{details.chassis_no}}</td>
+            </tr> -->
+            <!-- <tr>
+                <th style="font-weight: bold;">Engine Number:</th><td>{{details.engine_no}}</td>
+            </tr> -->
+            <!-- <tr>
+                <th style="font-weight: bold;">Fitness Upto:</th><td>{{details.fitness_upto}}</td>
+            </tr>  -->
+            <!-- <tr>
+                <th style="font-weight: bold;">Furl Norms:</th><td>{{details.fuel_norms}}</td>
+            </tr>       -->
+            <tr>
+                <th style="font-weight: bold;">Name: </th><td>{{details.owner_name}}</td>
+            </tr>      
+            <tr>
+                <th style="font-weight: bold;">Insurance Upto: </th><td>{{details.insurance_upto}}</td>
+            </tr>
+            <tr>
+                <th style="font-weight: bold;">Fuel Type: </th><td>{{details.fuel_type}}</td>
+            </tr> 
+                       <tr>
+                <th style="font-weight: bold;">Make: </th><td>{{details.maker}}</td>
+            </tr> 
+            <tr>
+                <th style="font-weight: bold;">Model:</th><td>{{details.model}}</td>
+            </tr>  
+                   
+                     <!-- <tr>
+                <th style="font-weight: bold;">Registration Date:</th><td>{{details.registration_date}}</td>
+            </tr>  -->
+                       <!-- <tr>
+                <th style="font-weight: bold;">Registration No:</th><td>{{details.registration_no}}</td>
+            </tr>     -->
+                    <!-- <tr>
+                <th style="font-weight: bold;">Road Tax Paid Upto:</th><td>{{details.road_tax_paid_upto}}</td>
+            </tr>    -->
+                     <!-- <tr>
+                <th style="font-weight: bold;">Vehicle Class:</th><td>{{details.vehicle_class}}</td>
+            </tr>             -->
+        </table>
+    </div>
+</div>

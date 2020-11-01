@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vehicle-details"
+    }
+  },
+  "defaultProject": "vehicle-details",
+  "cli": {
+    "analytics": "f1de786e-84c6-4db2-81b7-32f840d14b24"
+  }
 }
