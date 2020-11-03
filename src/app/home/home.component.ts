@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VehicleService } from '../vehicle.service'
-import { FormBuilder } from '@angular/forms'
+import { FormBuilder } from '@angular/forms';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
   noData = false;
 
   ngOnInit(): void {
+    AOS.init();
   }
 
   onSubmit(){
